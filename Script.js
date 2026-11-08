@@ -1,119 +1,141 @@
-// document.querySelector("#logo").addEventListener("click", () => {
-//     alert("Hello");
-// });
-
-document.querySelector(".main-btn").addEventListener("click", () => {
-    document.querySelector(".tour").scrollIntoView({behavior: "smooth"});
-});
-
-
-
-// Dark mode and Light mode ->
-
-// let currMode = "light";
-
-// document.querySelector("#mode").addEventListener("click", () => {
-//     if(currMode === "light"){
-//         currMode = "dark";
-//         document.querySelector("body").classList.add("dark");
-//         document.querySelector("body").classList.remove("light");
-//     }
-
-//     else{
-//         currMode = "light";
-//         document.querySelector("body").classList.add("light");
-//         document.querySelector("body").classList.remove("dark");
-//     }
-
-//     console.log(currMode);
-// });
-
-
-
-let color = "var(--orange)";
-let home = document.querySelector("#home");
-
-if(home !== document.querySelector(".hero-section")){
-    home.addEventListener("click", () =>{
-        home.style.background = "var(--orange)";
-        home.style.color = "white";
-    });
-    
+const navigationEntry = performance.getEntriesByType("navigation")[0];
+if (navigationEntry?.type === "reload") {
+    history.scrollRestoration = "manual";
+    history.replaceState(history.state, "", `${location.pathname}${location.search}`);
+    window.addEventListener("pageshow", () => {
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    }, { once: true });
 }
 
+const menuToggle = document.querySelector(".menu-toggle");
+const siteNavigation = document.querySelector(".site-nav");
+const siteStatus = document.querySelector("#site-status");
+const contactForm = document.querySelector("#contact-form");
+const destinationSearchField = document.querySelector("#destination-search");
+const heroVideo = document.querySelector(".bg-video");
+const videoPlayButton = document.querySelector(".video-play-btn");
 
+siteStatus.textContent = "";
+siteStatus.classList.remove("is-visible");
+heroVideo.muted = true;
+heroVideo.defaultMuted = true;
+heroVideo.autoplay = true;
+heroVideo.loop = true;
+heroVideo.playsInline = true;
 
-// header -->
-home.addEventListener("click", ()=>{
-    document.querySelector("header").scrollIntoView({behavior: "smooth"});
+function playHeroVideo() {
+    if (document.hidden) {
+        return;
+    }
+
+    const playback = heroVideo.play();
+    if (!playback) {
+        return;
+    }
+
+    playback.then(() => {
+        videoPlayButton.hidden = true;
+        siteStatus.classList.remove("is-visible");
+    }).catch((error) => {
+        if (error.name === "AbortError") {
+            return;
+        }
+
+        if (error.name === "NotAllowedError") {
+            videoPlayButton.hidden = false;
+            return;
+        }
+
+        console.error("The hero background video could not start.", error);
+        showSiteStatus("The hero video could not be loaded.");
+    });
+}
+
+playHeroVideo();
+
+videoPlayButton.addEventListener("click", playHeroVideo);
+
+heroVideo.addEventListener("playing", () => {
+    videoPlayButton.hidden = true;
 });
 
-document.querySelector("#about").addEventListener("click", () =>{
-    document.querySelector(".about").scrollIntoView({behavior: "smooth"});
+document.addEventListener("visibilitychange", () => {
+    if (!document.hidden && heroVideo.paused) {
+        playHeroVideo();
+    }
 });
 
-document.querySelector("#contact").addEventListener("click", () =>{
-    document.querySelector(".contact-us").scrollIntoView({behavior: "smooth"});
+window.addEventListener("pageshow", () => {
+    if (!document.hidden && heroVideo.paused) {
+        playHeroVideo();
+    }
 });
 
+function showSiteStatus(message) {
+    siteStatus.textContent = message;
+    siteStatus.classList.add("is-visible");
+    window.clearTimeout(showSiteStatus.timeoutId);
+    showSiteStatus.timeoutId = window.setTimeout(() => {
+        siteStatus.classList.remove("is-visible");
+    }, 5000);
+}
 
+function closeNavigation() {
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation menu");
+    siteNavigation.classList.remove("is-open");
+}
 
-
-// gallery -->
-document.querySelector(".leh").addEventListener("click", () =>{
-    window.location.href="leh.html";
+menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
+    siteNavigation.classList.toggle("is-open", !isOpen);
 });
 
-document.querySelector(".umlinga").addEventListener("click", () =>{
-    window.location.href="umlinga.html";
+siteNavigation.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeNavigation);
 });
 
-document.querySelector(".Zensakarroad").addEventListener("click", () =>{
-    window.location.href="Zensakarroad.html";
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        closeNavigation();
+    }
 });
 
-document.querySelector(".Thikesy").addEventListener("click", () =>{
-    window.location.href="Thikesy.html";
+document.querySelector(".main-btn").addEventListener("click", () => {
+    document.querySelector("#destinations").scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+    });
 });
 
-document.querySelector(".Zensakar").addEventListener("click", () =>{
-    window.location.href="Zensakar.html";
-});
-document.querySelector(".pangong").addEventListener("click", () =>{
-    window.location.href="pangong.html";
-});
-document.querySelector(".santistupa").addEventListener("click", () =>{
-    window.location.href="santistupa.html";
-});
-document.querySelector(".khardungla").addEventListener("click", () =>{
-    window.location.href="khardungla.html";
-});
-document.querySelector(".chandratal").addEventListener("click", () =>{
-    window.location.href="chandratal.html";
+document.querySelector(".unique-places-grid").addEventListener("click", (event) => {
+    const place = event.target.closest("[data-destination-query]");
+    if (!place) {
+        return;
+    }
+
+    destinationSearchField.value = place.dataset.destinationQuery;
+    destinationSearchField.dispatchEvent(new Event("input", { bubbles: true }));
 });
 
-
-
-document.querySelector(".news-btn").addEventListener("click", () =>{
-    window.location.href="https://mail.google.com/mail/u/0/#inbox?compose=new";
+document.querySelector("#destination-dialog").addEventListener("click", (event) => {
+    if (event.target === event.currentTarget) {
+        event.currentTarget.close();
+    }
 });
 
-document.querySelector(".btnn").addEventListener("click", () =>{
-    window.location.href="about.html";
-});
+contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!contactForm.reportValidity()) {
+        return;
+    }
 
-document.querySelector("#insta").addEventListener("click", () =>{
-    window.location.href="https://www.instagram.com/mantu___004?igsh=YW9tbndhaTBwbjR2";
-});
-
-document.querySelector("#github").addEventListener("click", () =>{
-    window.location.href="https://github.com/Mantu-code";
-});
-
-document.querySelector("#email").addEventListener("click", () =>{
-    window.location.href="https://mail.google.com/mail/u/0/#inbox";
-});
-
-document.querySelector("#linkedin").addEventListener("click", () =>{
-    window.location.href="https://www.linkedin.com/in/mantu-kunda-744285289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app";
+    const formData = new FormData(contactForm);
+    const subject = encodeURIComponent(formData.get("subject").toString());
+    const body = encodeURIComponent(
+        `From: ${formData.get("name")}\nReply to: ${formData.get("email")}\n\n${formData.get("message")}`
+    );
+    showSiteStatus("Your email app will open with this message. This website does not send or store it.");
+    window.location.href = `mailto:?subject=${subject}&body=${body}`;
 });
