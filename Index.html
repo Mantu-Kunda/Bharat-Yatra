@@ -1,277 +1,685 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Dream Place Ladakh</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./IMAGE/landscape_2_24dp_78A75A_FILL0_wght400_GRAD0_opsz24.svg" type="image/x-icon">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BHARAT YATRA | Explore India</title>
+    <link rel="stylesheet" href="Style.css?v=responsive-world-map-2" />
+    <link rel="icon" href="./IMAGE/World-Map-Transparent.png" type="image/png" />
 
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Satisfy&family=Underdog&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Satisfy&family=Underdog&display=swap");
     </style>
-
-</head>
-<body>
-
+  </head>
+  <body>
     <header>
-        <section class="head">
+      <section class="head">
+        <div class="heading">
+          <a id="logo" href="#home-top" aria-label="BHARAT YATRA home">
+            <img
+              class="brand-mark"
+              src="./IMAGE/World-Map-Transparent.png"
+              alt=""
+              width="40"
+              height="40"
+            />
+            <h1>BHARAT YATRA</h1>
+          </a>
 
-                <div class="heading">
-                    <div id="logo">
-                    <img src="./IMAGE/World-Map-Transparent.png" alt="">
-                    <h1>The Ladakh Travel</h1>
-                </div>
+          <nav id="search" class="site-nav" aria-label="Main navigation">
+            <a id="home" href="#home-top">HOME</a>
+            <a href="#destinations">DESTINATIONS</a>
+            <a id="about" href="#about-section">ABOUT</a>
+            <a id="contact" href="#contact-section">CONTACT</a>
 
-                <div id="search">
-                    <span id="home">HOME</span>
-                    <span id="mode">MODE</span>
-                    <span id="about">ABOUT</span>
-                    <span id="contact">CONTACT</span>
+            <form
+              class="d-flex"
+              role="search"
+              aria-label="Search all destinations"
+            >
+              <input
+                class="search-bar"
+                type="search"
+                placeholder="Search India"
+                aria-label="Search destinations"
+              />
 
-                <form class="d-flex" role="search">
-                    <input class="search-bar" placeholder="search" aria-label="Search">
-
-                    <button class="search-btn" type="submit"><img src="./IMAGE/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
-                </form>
-                    
-                </div>
-                <div class="side-bar">
-                    <img src="./IMAGE/menu-bar-2.png" alt="">
-                </div>
-            </div>
-                
-                
-
-        </section>
+              <button
+                class="search-btn"
+                type="submit"
+                aria-label="Search destinations"
+              >
+                <svg class="site-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+            </form>
+          </nav>
+          <div class="side-bar">
+            <button
+              class="menu-toggle"
+              type="button"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              aria-controls="search"
+            >
+              <svg class="site-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
     </header>
 
     <main>
-        <section class="Hero-section">
+      <section class="Hero-section" id="home-top">
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          preload="auto"
+          poster="./IMAGE/Magnatic-ladakh.jpg"
+          class="bg-video"
+          aria-hidden="true"
+        >
+          <source src="./IMAGE/leh_video_1080p.mp4" type="video/mp4" />
+        </video>
 
-            <video autoplay loop muted plays-inline class="bg-video">
-                
-                <source src="./IMAGE/leh_video.mp4"  type="video/mp4">
-            </video>
+        <div class="main-content">
+          <p class="hero-eyebrow">MOUNTAIN AIR · WILD HORIZONS</p>
+          <h1>EXPLORE . DREAM . INDIA</h1>
 
-            <div class="main-content">
+          <p id="main-para">Explore India. Travel Smarter. Stay Prepared.</p>
 
-                
-                <h1>EXPLORE . DREAM . LADAKH</h1>
+          <button class="main-btn" type="button">START EXPLORING</button>
+          <button class="video-play-btn" type="button" hidden>
+            PLAY BACKGROUND VIDEO
+          </button>
+        </div>
+      </section>
 
-                <p id="main-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore quisquam accusantium voluptatem a temporibus! Temporibus incidunt saepe neque porro quo.</p>
+      <section class="second-section">
+        <div class="about" id="about-section">
+          <div class="a-text">
+            <p class="creator-eyebrow">ABOUT ME · CREATOR OF BHARAT YATRA</p>
+            <h2>Meet Mantu Kunda</h2>
+            <p><strong>The mind behind BHARAT YATRA</strong></p>
+            <p>
+              Hi! I'm Mantu Kunda, an MCA student specializing in Cloud
+              Computing and DevOps at Chandigarh University, with a passion for
+              technology, innovation and exploring new possibilities.
+            </p>
+            <p>
+              I created BHARAT YATRA with a vision to make travelling across
+              India smarter, easier and more informed.
+            </p>
+            <p>
+              I believe travelling should be more than simply choosing a
+              destination. It should be about making better decisions,
+              understanding possible challenges and discovering the best way to
+              experience a journey.
+            </p>
+            <p>
+              Through this project, I'm combining my interest in technology,
+              Python development, cloud computing and intelligent systems to
+              build a platform that helps travellers plan with greater
+              confidence.
+            </p>
+            <h3>My Vision</h3>
+            <p>
+              To build an intelligent travel platform that connects India's
+              incredible destinations with smarter travel planning, journey
+              insights and useful technology.
+            </p>
+            <p>
+              <strong>Explore India. Travel Smarter. Stay Prepared.</strong>
+            </p>
+            <p>
+              <em
+                >Built with curiosity, technology and a vision to make every
+                journey better.</em
+              >
+            </p>
+            <p>— Mantu Kunda<br />Creator of BHARAT YATRA</p>
 
-                <button class="main-btn" >START EXPLORING</button>
-                
+            <div class="social">
+              <a
+                href="https://www.instagram.com/mantu___004?psln=YW9tbndhaTBwbjR2"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                ><img src="./IMAGE/brand-instagram-logo.png" alt=""
+              /></a>
+              <a
+                href="https://www.linkedin.com/in/mantu-kunda"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                ><img src="./IMAGE/brand-linkedin-logo.png" alt=""
+              /></a>
+              <a
+                href="https://github.com/Mantu-Kunda"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                ><img src="./IMAGE/brand-github-logo.png" alt=""
+              /></a>
+              <a href="#contact-section" aria-label="Email Mantu Kunda">
+                <img src="./IMAGE/brand-email-logo.png" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <figure class="creator-visual">
+            <div class="creator-visual-frame">
+              <img
+                src="./IMAGE/destinations/living-root-bridge.jpg"
+                alt="A natural living root bridge crossing a forest stream in Meghalaya"
+                loading="lazy"
+              />
+            </div>
+          </figure>
+        </div>
+
+        <div class="tour" id="india-highlights">
+          <section class="unique-places" aria-labelledby="unique-places-title">
+            <div class="unique-places-heading">
+              <p class="destination-eyebrow">GO BEYOND THE ORDINARY</p>
+              <h2 id="unique-places-title">India's most unique places</h2>
+              <p>
+                From living bridges to floating islands, discover the places
+                that feel like nowhere else.
+              </p>
             </div>
 
-            
+            <div class="unique-places-grid">
+              <a
+                class="unique-place-card unique-place-roots"
+                href="#destinations"
+                data-destination-query="Meghalaya"
+              >
+                <span class="unique-place-art" aria-hidden="true"
+                  ><span class="unique-art-object"></span
+                ></span>
+                <span class="unique-place-copy">
+                  <span class="unique-place-region">Meghalaya · Northeast</span>
+                  <span class="unique-place-name">Living root bridges</span>
+                  <span class="unique-place-description"
+                    >Living pathways grown by Khasi communities, one root at a
+                    time.</span
+                  >
+                  <span class="unique-place-link"
+                    >Discover Meghalaya <span aria-hidden="true">↗</span></span
+                  >
+                </span>
+              </a>
 
-        </section>
+              <a
+                class="unique-place-card unique-place-loktak"
+                href="#destinations"
+                data-destination-query="Manipur"
+              >
+                <span class="unique-place-art" aria-hidden="true"
+                  ><span class="unique-art-object"></span
+                ></span>
+                <span class="unique-place-copy">
+                  <span class="unique-place-region">Manipur · Northeast</span>
+                  <span class="unique-place-name"
+                    >Loktak's floating islands</span
+                  >
+                  <span class="unique-place-description"
+                    >Glide across a lake scattered with green phumdi
+                    islands.</span
+                  >
+                  <span class="unique-place-link"
+                    >Discover Manipur <span aria-hidden="true">↗</span></span
+                  >
+                </span>
+              </a>
 
-        <section class="second-section">
-            
-            <div class="features">
-                <div class="f1">
-                    <span>_________________________</span>
-                    <h1>Featured</h1>
-                    <span>_________________________</span>
-                </div>
+              <a
+                class="unique-place-card unique-place-rann"
+                href="#destinations"
+                data-destination-query="Gujarat"
+              >
+                <span class="unique-place-art" aria-hidden="true"
+                  ><span class="unique-art-object"></span
+                ></span>
+                <span class="unique-place-copy">
+                  <span class="unique-place-region">Gujarat · West</span>
+                  <span class="unique-place-name">The White Rann</span>
+                  <span class="unique-place-description"
+                    >A vast salt desert that shifts from sunlit white to moonlit
+                    silver.</span
+                  >
+                  <span class="unique-place-link"
+                    >Discover Gujarat <span aria-hidden="true">↗</span></span
+                  >
+                </span>
+              </a>
 
-                <div class="f-img">
-                    <img src="./IMAGE/BBC_Travel_n3.webp" alt="" id="fe-img">
-                    <img src="./IMAGE/NBC_News_n3.webp" alt="" id="fe-img">
-                    <img src="./IMAGE/TIME-history_sm.webp" alt="" id="fe-img">
-                    <img src="./IMAGE/USA_Today_n5.webp" alt="" id="fe-img">
-                    <img src="./IMAGE/Travel_Leisure_n3.webp" alt="" id="fe-img">
-                </div>
+              <a
+                class="unique-place-card unique-place-hampi"
+                href="#destinations"
+                data-destination-query="Karnataka"
+              >
+                <span class="unique-place-art" aria-hidden="true"
+                  ><span class="unique-art-object"></span
+                ></span>
+                <span class="unique-place-copy">
+                  <span class="unique-place-region">Karnataka · South</span>
+                  <span class="unique-place-name">Hampi's boulder city</span>
+                  <span class="unique-place-description"
+                    >Ancient temples and a lost capital among giant stone
+                    hills.</span
+                  >
+                  <span class="unique-place-link"
+                    >Discover Karnataka <span aria-hidden="true">↗</span></span
+                  >
+                </span>
+              </a>
+
+              <a
+                class="unique-place-card unique-place-chilika"
+                href="#destinations"
+                data-destination-query="Odisha"
+              >
+                <span class="unique-place-art" aria-hidden="true"
+                  ><span class="unique-art-object"></span
+                ></span>
+                <span class="unique-place-copy">
+                  <span class="unique-place-region">Odisha · East</span>
+                  <span class="unique-place-name">Chilika's blue lagoon</span>
+                  <span class="unique-place-description"
+                    >A vast brackish lagoon alive with islands, birds and open
+                    water.</span
+                  >
+                  <span class="unique-place-link"
+                    >Discover Odisha <span aria-hidden="true">↗</span></span
+                  >
+                </span>
+              </a>
+
+              <a
+                class="unique-place-card unique-place-majuli"
+                href="#destinations"
+                data-destination-query="Assam"
+              >
+                <span class="unique-place-art" aria-hidden="true"
+                  ><span class="unique-art-object"></span
+                ></span>
+                <span class="unique-place-copy">
+                  <span class="unique-place-region">Assam · Northeast</span>
+                  <span class="unique-place-name">Majuli river island</span>
+                  <span class="unique-place-description"
+                    >Island life shaped by the Brahmaputra, craft and
+                    community.</span
+                  >
+                  <span class="unique-place-link"
+                    >Discover Assam <span aria-hidden="true">↗</span></span
+                  >
+                </span>
+              </a>
             </div>
+          </section>
 
-            <div class="about">
+          <div class="india-places-heading">
+            <p class="destination-eyebrow">A JOURNEY ACROSS BHARAT</p>
+            <h2>India's famous places</h2>
+            <p>
+              From timeless monuments to lush backwaters, discover remarkable
+              places across India.
+            </p>
+          </div>
 
+          <div class="t-img">
+            <figure>
+              <img
+                src="./IMAGE/destinations/taj-mahal.jpg"
+                alt="The Taj Mahal reflected in the water at Agra, Uttar Pradesh"
+                loading="lazy"
+              />
+              <figcaption class="destination-photo-caption">
+                <h3>Taj Mahal</h3>
+                <span>Agra · Uttar Pradesh</span>
+                <a
+                  class="destination-photo-credit"
+                  href="https://commons.wikimedia.org/wiki/File:Aks_The_Reflection_Taj_Mahal.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Photo: Antrix3 · CC BY-SA 4.0</a
+                >
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="./IMAGE/destinations/kerala-backwaters.jpg"
+                alt="Houseboats cruising the palm-lined backwaters in Kerala"
+                loading="lazy"
+              />
+              <figcaption class="destination-photo-caption">
+                <h3>Kerala backwaters</h3>
+                <span>Alleppey · Kerala</span>
+                <a
+                  class="destination-photo-credit"
+                  href="https://commons.wikimedia.org/wiki/File:Houseboat_on_Punnamada_Backwaters_-Kerala.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Photo: Varghesepunnamada · CC BY 4.0</a
+                >
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="./IMAGE/destinations/hampi.jpg"
+                alt="The Lotus Mahal among Hampi's historic ruins"
+                loading="lazy"
+              />
+              <figcaption class="destination-photo-caption">
+                <h3>Lotus Mahal</h3>
+                <span>Hampi · Karnataka</span>
+                <a
+                  class="destination-photo-credit"
+                  href="https://commons.wikimedia.org/wiki/File:Hampi,_India,_Lotus_Mahal.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Photo: Vyacheslav Argenberg · CC BY 4.0</a
+                >
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="./IMAGE/destinations/hawa-mahal.jpg"
+                alt="The pink facade of Hawa Mahal in Jaipur, Rajasthan"
+                loading="lazy"
+              />
+              <figcaption class="destination-photo-caption">
+                <h3>Hawa Mahal</h3>
+                <span>Jaipur · Rajasthan</span>
+                <a
+                  class="destination-photo-credit"
+                  href="https://commons.wikimedia.org/wiki/File:20191218,_Hawa_Mahal_(The_Palace_of_Winds)_in_Jaipur,_1128_9119.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Photo: Jakub Hałun · CC BY-SA 4.0</a
+                >
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="./IMAGE/destinations/living-root-bridge.jpg"
+                alt="A living root bridge crossing a stream in Meghalaya"
+                loading="lazy"
+              />
+              <figcaption class="destination-photo-caption">
+                <h3>Living root bridge</h3>
+                <span>Meghalaya · Northeast India</span>
+                <a
+                  class="destination-photo-credit"
+                  href="https://commons.wikimedia.org/wiki/File:A_living_root_bridge_in_Meghalaya.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Photo: Sanchit1504 · CC BY-SA 4.0</a
+                >
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="./IMAGE/destinations/varanasi.jpg"
+                alt="Priests performing the Ganga Aarti at Varanasi's ghats"
+                loading="lazy"
+              />
+              <figcaption class="destination-photo-caption">
+                <h3>Ganga Aarti</h3>
+                <span>Varanasi · Uttar Pradesh</span>
+                <a
+                  class="destination-photo-credit"
+                  href="https://commons.wikimedia.org/wiki/File:GangaAarti_Varanasi_India.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Photo: Mommyatwork · CC BY-SA 4.0</a
+                >
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
 
-                <img src="./IMAGE/4178AFD9-8293-4C28-9FF2-B87F4C205900_1_105_c.jpeg" alt="" id="image">
+      <section
+        class="destination-directory"
+        id="destinations"
+        aria-labelledby="destination-title"
+      >
+        <div class="destination-heading">
+          <p class="destination-eyebrow">BHARAT YATRA</p>
+          <h2 id="destination-title">Find your next destination</h2>
+          <p>
+            Browse curated places across all 28 states and 8 Union Territories.
+          </p>
+        </div>
 
-                <div class="a-text">
-                    <h1>Thanks for looking!</h1>
-                    <p>Hi! I'm <b>Mantu Kunda</b>, <br/>
-                        a passionate and dedicated tech enthusiast from Bhubaneswar, currently pursuing a <i>Bachelor of Computer Applications (BCA)</i> at ASBM University. I'm 21 years old and have a strong interest in programming, riding, and travel.<br/><br/>
+        <form
+          class="destination-filters"
+          id="destination-filters"
+          role="search"
+        >
+          <label class="destination-search-field" for="destination-search">
+            <span>Search destinations</span>
+            <input
+              id="destination-search"
+              type="search"
+              list="destination-suggestions"
+              placeholder="Try Kerala, beaches, or Hampi"
+            />
+          </label>
+          <label for="destination-type">
+            <span>Jurisdiction</span>
+            <select id="destination-type">
+              <option value="">All states and territories</option>
+              <option value="State">States</option>
+              <option value="Union Territory">Union Territories</option>
+            </select>
+          </label>
+          <label for="destination-region">
+            <span>Region</span>
+            <select id="destination-region">
+              <option value="">All regions</option>
+              <option value="Central">Central India</option>
+              <option value="East">East India</option>
+              <option value="North">North India</option>
+              <option value="Northeast">Northeast India</option>
+              <option value="South">South India</option>
+              <option value="West">West India</option>
+              <option value="Islands">Islands</option>
+            </select>
+          </label>
+          <label for="destination-category">
+            <span>Experience</span>
+            <select id="destination-category">
+              <option value="">All experiences</option>
+              <option value="Adventure">Adventure</option>
+              <option value="Coast">Coast</option>
+              <option value="Culture">Culture</option>
+              <option value="Heritage">Heritage</option>
+              <option value="Nature">Nature</option>
+            </select>
+          </label>
+          <button class="destination-reset" type="reset">Clear filters</button>
+        </form>
 
-                        With a solid foundation in <b>C++, HTML, CSS, JAVASCRIPT, JAVA</b>  I love solving problems and building efficient solutions. I also enjoy turning complex technical topics into clear and engaging content for readers of all levels. Whether it's crafting helpful articles, translating ideas across languages, or coding my next project, I'm always eager to learn and grow.
+        <datalist id="destination-suggestions"></datalist>
+        <p
+          class="destination-count"
+          id="destination-count"
+          aria-live="polite"
+        ></p>
+        <div
+          class="destination-grid"
+          id="destination-grid"
+          aria-live="polite"
+        ></div>
+        <p class="destination-empty" id="destination-empty" hidden>
+          No matches found. Try a different search or filter.
+        </p>
+        <p class="destination-disclaimer">
+          Destination highlights are curated for discovery. Current travel
+          conditions, availability, and costs are not provided.
+        </p>
+      </section>
 
-                        This website is a reflection of my journey in tech, learning, and creativity. Feel free to explore my work and connect with me!</p>
+      <section
+        class="fourth-sec"
+        style="background-image: url(./IMAGE/Magnatic-ladakh.jpg)"
+      >
+        <a class="more-destinations-link" href="#destinations"
+          >EXPLORE ALL DESTINATIONS <span aria-hidden="true">→</span></a
+        >
+        <div class="Thanks">
+          <div class="four-1">
+            <h1>GET IN TOUCH</h1>
+            <span
+              >Feel free to contact me if you have travel questions, comments,
+              or suggestions. I'll try to get back to you!</span
+            >
+          </div>
 
-                    <div class="btnn"><button>READ MORE  -></button> </div>
-                    <div class="social">
-                        <img src="./IMAGE/icons8-instagram-50.png" alt="" id="insta">
-                        <img src="./IMAGE/icons8-github-logo-50.png" alt="" id="github">
-                        <img src="./IMAGE/icons8-email-50.png" alt="" id="email">
-                        <img src="./IMAGE/icons8-linkedin-50.png" alt="" id="linkedin">
-                    </div>
-            
-                </div>
-                
-            </div>
-            
-            <div class="tour">
-                <h2>EXPLORE</h2>
-                <p>Most visited places in ladakh, Ladakh is a popular travel destination offering stunning landscapes and cultural experiences.</p>
+          <div class="four-2">
+            <img
+              src="./IMAGE/11735817155restfqalxujxszk1ycqadta2zwhyak1is2w6gjuarnc9epqpgtcknrg0j47wmjnhkvsscmk0rehvt3npzxuuhoctavatjg7h79dq (1).webp"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
 
-                <div class="t-img">
+      <section class="contact-us" id="contact-section">
+        <div class="container">
+          <div class="contact-right">
+            <h1>CONTACT</h1>
+            <span>Let's talk!...</span>
 
-                    <div class="chandratal">
-                        <img src="./IMAGE/Chandra tal.jpg" alt="">
-                        <span>Chandra tal</span>
-                    </div>
-                    <div class="khardungla">
-                        <img src="./IMAGE/khardung la.jpeg" alt="">
-                        <span>Khardung la</span>
-                    </div>
-                    <div class="santistupa">
-                         <img src="./IMAGE/santi stupa-ladakh.jpg" alt="">
-                         <span>Santi stupa</span>
-                        </div>
-                    <div class="pangong">
-                        <img src="./IMAGE/pangong tso.jpeg" alt="">
-                        <span>Pangong tso</span>
-                    </div>
-                    <div class="Zensakar">
-                        <img src="./IMAGE/Zensakar-ladakh.jpg" alt="">
-                        <span>Zensakar</span>
-                    </div>
-                    <div class="Thikesy">
-                        <img src="./IMAGE/Thikesy-velly.jpg" alt="">
-                        <span>Thikesy velly</span>
-                    </div>
-                    <div class="Zensakarroad">
-                        <img src="./IMAGE/zankar-road.jpg" alt="">
-                        <span>Zansakar road</span>
-                    </div>
-                    <div class="umlinga">
-                        <img src="./IMAGE/umringla.jpg" alt="">
-                        <span>Umlinga</span>
-                    </div>
-                    <div class="leh">
-                        <img src="./IMAGE/lehh.jpg" alt="">
-                        <span>Leh Ladakh</span>
-                    </div>
-                    
-                </div>
-            </div>  
-        </section> 
+            <form id="contact-form" class="contact-form">
+              <div class="level">
+                <label for="contact-name">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="contact-name"
+                  autocomplete="name"
+                  required
+                />
+                <label for="contact-email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="contact-email"
+                  autocomplete="email"
+                  required
+                />
+                <label for="contact-subject">Subject</label>
+                <input
+                  type="text"
+                  name="subject"
+                  id="contact-subject"
+                  required
+                />
+              </div>
 
-        <section class="thire-sec">
-            
-                  <h1 class="h1">DESTINATIONS</h1>
+              <div class="text-area">
+                <label for="contact-message">Message</label>
+                <textarea
+                  name="message"
+                  id="contact-message"
+                  required
+                ></textarea>
+                <button type="submit">Continue to email</button>
+              </div>
+            </form>
+            <p
+              class="form-status"
+              id="contact-status"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </div>
+        </div>
+      </section>
 
-            <div class="destination">
-                
-                <div class="desti-img">
-                    <img src="./IMAGE/india 2.jpg" alt="">
-                    <img src="./IMAGE/usa flag.jpg" alt="">
-                    <img src="./IMAGE/europe flag.jpg" alt="">
-                    <img src="./IMAGE/flag.jpg" alt="">
-                </div>
-
-                <div class="desti-text">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, vel.</p>
-                    <button>Choose</button>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="fourth-sec" style="background-image: url(./IMAGE/cb186c96-150b-4de1-a0fe-0c5a9c771014.jpg.jpg);">
-            <button> -> MORE DESTINATION</button>
-            <div class="Thanks">
-                <div class="four-1">
-                    <h1>GET IN TOUCH</h1>
-                        <span>Feel free to contact me if you have travel questions, comments, or suggestions.I'll try to get back to you!</span>
-                </div>
-
-                <div class="four-2">
-                    <img src="./IMAGE/11735817155restfqalxujxszk1ycqadta2zwhyak1is2w6gjuarnc9epqpgtcknrg0j47wmjnhkvsscmk0rehvt3npzxuuhoctavatjg7h79dq (1).webp" alt="">
-                </div>
-
-                
-                <!-- <img src="./IMAGE/cb186c96-150b-4de1-a0fe-0c5a9c771014.jpg.jpg" alt=""> -->
-            </div>
-        </section>
-
-        <section class="last-sec">
-            <div class="photos">
-                <img src="./IMAGE/IMG-20230724-WA0006.jpg" alt="">
-                <img src="./IMAGE/IMG20241006102800.jpg" alt="">
-                <img src="./IMAGE/IMG_20250121_120242_851.jpg" alt="">
-                <img src="./IMAGE/RUID9691e398a3a541218fc2eb62d920707f.jpg" alt="">
-                <img src="./IMAGE/IMG20241006071652.jpg" alt="">
-                <img src="./IMAGE/WhatsApp Image 2025-06-05 at 18.55.47.jpeg" alt="">
-                <img src="./IMAGE/IMG-20241017-WA0010.jpg" alt="">
-                <img src="./IMAGE/IMG-20241111-WA0024.jpg" alt="">
-            </div>
-        </section>
-
-        <section class="contact-us">
-            <div class="container">
-                <div class="contact-left">
-                    <img src="./IMAGE/IMG20230724104850.jpg" alt="">
-                </div>
-                <div class="contact-right">
-                    <h1>CONTACT</h1>
-                    <span>Let's talk!...</span>
-                    
-                    <div class="level">
-                        <input type="text" name="text" id="name" placeholder="Name*">
-                        <input type="email" name="email" id="email" placeholder="Email*">
-                        <input type="text" name="subject" id="subject" placeholder="subject">
-                    </div>
-
-                    <div class="text-area">
-                        <textarea  id="" placeholder="Write your message..."></textarea>
-                        <button>Submit</button>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="news">
-            <div class="letter">
-                <span>Newsletter</span>
-                <div class="n-l">
-                    <input type="email" name="mail" placeholder="Email..." id="mail">
-                    <button class="news-btn">Contact</button>
-                </div>
-                
-                
-            </div>
-        </section>
-            
+      <section class="news">
+        <div class="letter">
+          <span>Travel updates</span>
+          <p>
+            Newsletter signup will be available when the mailing service is
+            connected. No email address is collected here.
+          </p>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="foot-1">
-            <div class="foot-s">
-                <img src="./IMAGE/mail_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="">
-            <img src="./IMAGE/hd-white-outline-round-instagram-logo-icon-png-7017516951188810uvfjvesqu.png" alt="">
-            <img src="./IMAGE/free-logo-github-free-png.webp" alt="">
-            <img src="./IMAGE/free-logo-github-free-png.webp" alt="">
-            <img src="./IMAGE/rss_feed_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt=""></div>
-           
+      <div class="foot-1">
+        <div class="foot-s">
+          <a
+            href="https://www.instagram.com/mantu___004?psln=YW9tbndhaTBwbjR2"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            ><img src="./IMAGE/brand-instagram-logo.png" alt=""
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/mantu-kunda"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            ><img src="./IMAGE/brand-linkedin-logo.png" alt=""
+          /></a>
+          <a
+            href="https://github.com/Mantu-Kunda"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            ><img src="./IMAGE/brand-github-logo.png" alt=""
+          /></a>
+          <a href="#contact-section" aria-label="Email Mantu Kunda">
+            <img src="./IMAGE/brand-email-logo.png" alt="" />
+          </a>
         </div>
-        <div class="foot-2">
-            <span>© The Ladakh Travel 2025</span>
-            <span id="p">
-                Affiliate Disclosures • Privacy Policy • Terms Of Use
-            </span>
-            <span>ome of the pages on my travel blog contain affiliate links. Whenever you buy something through one of these links, I get a small commission at no extra cost to you. As an affiliate, I only recommend products and services that I feel are high quality and helpful to my readers. Thanks for your support.
-
-            </span>
-        </div>
+      </div>
+      <div class="foot-2">
+        <span>© BHARAT YATRA</span>
+        <span>Explore India. Travel Smarter. Stay Prepared.</span>
+      </div>
     </footer>
 
-       <script src="Script.js" ></script>
-
-</body>
+    <dialog
+      class="destination-dialog"
+      id="destination-dialog"
+      aria-labelledby="dialog-title"
+    >
+      <form method="dialog">
+        <button class="dialog-close" aria-label="Close destination details">
+          ×
+        </button>
+      </form>
+      <p class="destination-eyebrow" id="dialog-region"></p>
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-type"></p>
+      <h3>Places to explore</h3>
+      <ul id="dialog-highlights"></ul>
+      <p class="destination-disclaimer">
+        Curated highlights only; current travel information is not available.
+      </p>
+    </dialog>
+    <p
+      class="site-status"
+      id="site-status"
+      role="status"
+      aria-live="polite"
+    ></p>
+    <script src="destinations.js"></script>
+    <script src="Script.js?v=refresh-start-1"></script>
+  </body>
 </html>

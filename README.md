@@ -1,28 +1,34 @@
-# The Ladakh Travel
+# BHARAT YATRA
 
-A static travel website for exploring Ladakh. Browse destination highlights, view travel photography, and learn more about the creator.
+A travel discovery website celebrating destinations across India. Explore destination highlights, browse travel photography, and learn more about creator Mantu Kunda.
 
 ## Features
 
-- Homepage with featured content and destination cards
-- Individual pages for popular places in and around Ladakh
-- About page with information about the creator
+- Responsive homepage with an autoplaying Ladakh travel-video hero and scenic image fallback
+- Floating 3D scenic photo beside the creator story, with photo attribution
+- Destination directory cards with a state-specific photo and visible image credits
+- India-wide editorial picks for distinctive places, linked to the destination directory
+- Photo highlights spanning famous destinations across India
+- Searchable directory covering all 28 states and 8 Union Territories
+- Filters for jurisdiction, region, and experience category
+- Creator profile and social links on the homepage
 - Responsive layouts styled with CSS
 - Local images and video stored in the `IMAGE/` folder
 
-## Destinations
+The state directory uses locally stored Wikimedia Commons photos matched to each state or Union Territory. Every card displays the photographer and license and links to the original source page.
 
-- [Chandratal Lake](./chandratal.html)
-- [Khardung La](./khardungla.html)
-- [Leh](./leh.html)
-- [Pangong Tso](./pangong.html)
-- [Shanti Stupa](./santistupa.html)
-- [Thiksey Monastery](./Thikesy.html)
-- [Umling La](./umlinga.html)
-- [Zanskar](./Zensakar.html)
-- [Zanskar Road](./Zensakarroad.html)
+Destination highlights are curated for discovery; the site does not provide live travel conditions, availability, or prices.
 
-More about the creator: [About](./about.html)
+The creator profile and social links are on the homepage in [About Me](./index.html#about-section).
+
+## Photo credits
+
+- Taj Mahal: Antrix3, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), [source](https://commons.wikimedia.org/wiki/File:Aks_The_Reflection_Taj_Mahal.jpg)
+- Kerala backwaters: Varghesepunnamada, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), [source](https://commons.wikimedia.org/wiki/File:Houseboat_on_Punnamada_Backwaters_-Kerala.jpg)
+- Hampi: Vyacheslav Argenberg, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), [source](https://commons.wikimedia.org/wiki/File:Hampi,_India,_Lotus_Mahal.jpg)
+- Hawa Mahal: Jakub Hałun, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), [source](https://commons.wikimedia.org/wiki/File:20191218,_Hawa_Mahal_(The_Palace_of_Winds)_in_Jaipur,_1128_9119.jpg)
+- Living root bridge: Sanchit1504, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), [source](https://commons.wikimedia.org/wiki/File:A_living_root_bridge_in_Meghalaya.jpg)
+- Varanasi Ganga Aarti: Mommyatwork, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), [source](https://commons.wikimedia.org/wiki/File:GangaAarti_Varanasi_India.jpg)
 
 ## Built with
 
@@ -30,12 +36,22 @@ More about the creator: [About](./about.html)
 - CSS
 - JavaScript
 
-No package installation or build step is required.
+The static frontend has no package installation or build step. Run it from a local HTTP server so the destination data can be loaded.
+
+Destination records are stored in [`data/destinations.json`](./data/destinations.json), which powers the static directory. The frontend is complete as a static site: it does not provide live travel conditions, and contact/newsletter messages are not sent or stored.
 
 ## Run locally
 
-Clone or download this repository, then open [`Index.html`](./Index.html) in a browser.
+From the repository root, start the static site:
+
+```bash
+python -m http.server 8001
+```
+
+Open `http://localhost:8001/`.
 
 ## Publish with GitHub Pages
 
-In the repository settings, enable GitHub Pages and select the branch and root folder containing the site. The homepage is currently named `Index.html` with a capital `I`, so it can be opened at `/Index.html`. To use the standard site root as the homepage, rename it to `index.html`. Also make sure the stylesheet link casing matches the file [`Style.css`](./Style.css), since GitHub Pages uses case-sensitive paths.
+In the repository settings, enable GitHub Pages and select the `main` branch and root folder. The site uses [`index.html`](./index.html) as its homepage entry point and [`Style.css`](./Style.css) as its stylesheet; keep the filename casing unchanged because GitHub Pages is case-sensitive.
+
+Backend and live integrations have not been started.
